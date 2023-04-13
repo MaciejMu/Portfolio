@@ -1,0 +1,26 @@
+.button {
+  background: var(--gray-dark);
+  border: var(--gray-dark);
+  padding: 15px 30px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.button:hover {
+  background: black;
+}
+
+.outlined {
+  background: transparent;
+  color: black;
+  border: 1px solid black;
+}
+
+.outlined:hover {
+  background: var(--gray-dark);
+  color: white;
+}

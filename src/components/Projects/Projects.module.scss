@@ -1,0 +1,29 @@
+.section {
+  width: 100vw;
+}
+
+.container {
+  h3 {
+    padding: 10px;
+    color: black;
+  }
+}
+
+.card {
+  text-align: center;
+  padding: 30px 30px;
+  border: 1px solid black;
+  border-radius: 30px;
+  width: max-content;
+}
+
+.cardImage {
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
