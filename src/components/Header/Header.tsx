@@ -1,4 +1,4 @@
-import React from "react";
+import ScrollLink from "../ScrollLink/ScrollLink";
 import style from "./Header.module.scss";
 
 export const Header = () => {
@@ -6,10 +6,18 @@ export const Header = () => {
     <header className={style.header}>
       <h1>Maciek</h1>
       <ul>
-        <li>O mnie</li>
-        <li>Doświadczenie</li>
-        <li>Portfolio</li>
-        <li>Kontakt</li>
+        <ScrollLink href={"#AboutMe"}>
+          <li> O mnie</li>
+        </ScrollLink>
+        <ScrollLink href={"#Skills"}>
+          <li>Doświadczenie</li>{" "}
+        </ScrollLink>
+        <ScrollLink href={"#Projects"}>
+          <li>Portfolio</li>{" "}
+        </ScrollLink>
+        <ScrollLink href={"#Contact"}>
+          <li>Kontakt</li>{" "}
+        </ScrollLink>
       </ul>
     </header>
   );

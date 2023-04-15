@@ -20,7 +20,11 @@ type ProjectsProps = {
 const Projects: FC<ProjectsProps> = ({ cardData }) => {
   return (
     <>
-      <SectionHeader title={"Projekty"} paragraph={"przejrzyj moje"} />
+      <SectionHeader
+        title={"Projekty"}
+        paragraph={"przejrzyj moje"}
+        id="Projects"
+      />
       <section className={style.section}>
         <Carousel
           show={3.5}

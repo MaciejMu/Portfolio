@@ -5,7 +5,7 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 
 const Skills = () => {
   return (
-    <section className={style.section}>
+    <section className={style.section} id="Skills">
       <SectionHeader title={"Umiejętności"} paragraph={"sprawdź moje"} />
       <div className={style.list}>
         <CheckedList

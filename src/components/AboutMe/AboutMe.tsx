@@ -1,11 +1,10 @@
-import React from "react";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import Image from "next/image";
 import style from "./AboutMe.module.scss";
 
-const AboutMe = () => {
+const AboutMe = ({}) => {
   return (
-    <section className={style.container}>
+    <section className={style.container} id="AboutMe">
       <SectionHeader title={"O mnie"} paragraph={"poczytaj"} />
       <div>
         <p>
