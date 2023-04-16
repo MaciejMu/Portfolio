@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+}
+
+.memoji {
+  border: 1px solid black;
+  background: var(--gradient);
+  // border-radius: 30px;
+  border-radius: 50%;
+  width: auto;
+}

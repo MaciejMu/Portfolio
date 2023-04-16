@@ -28,8 +28,8 @@ const Projects: FC<ProjectsProps> = ({ cardData }) => {
       <section className={style.section}>
         <Carousel
           show={3.5}
-          slide={3}
-          transition={1.5}
+          slide={2}
+          transition={0.5}
           swiping={true}
           infinite
           useArrowKeys

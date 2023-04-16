@@ -3,6 +3,7 @@ import Container from "@/components/Container/Container";
 import Skills from "@/components/Skills/Skills";
 import AboutMe from "@/components/AboutMe/AboutMe";
 import Projects from "@/components/Projects/Projects";
+import Contact from "@/components/Contact/Contact";
 
 export default function Home() {
   return (
@@ -56,6 +57,9 @@ export default function Home() {
             },
           ]}
         />
+      </Container>
+      <Container>
+        <Contact />
       </Container>
     </main>
   );
