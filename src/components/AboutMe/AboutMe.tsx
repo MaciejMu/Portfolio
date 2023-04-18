@@ -6,6 +6,7 @@ const AboutMe = ({}) => {
   return (
     <section className={style.container} id="AboutMe">
       <SectionHeader title={"O mnie"} paragraph={"poczytaj"} />
+
       <div className={style.content}>
         <p>
           Moim największym atutem jest moja determinacja i chęć ciągłego

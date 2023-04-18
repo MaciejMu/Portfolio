@@ -10,13 +10,13 @@ export const Header = () => {
           <li> O mnie</li>
         </ScrollLink>
         <ScrollLink href={"#Skills"}>
-          <li>Doświadczenie</li>{" "}
+          <li>Doświadczenie</li>
         </ScrollLink>
         <ScrollLink href={"#Projects"}>
-          <li>Portfolio</li>{" "}
+          <li>Portfolio</li>
         </ScrollLink>
         <ScrollLink href={"#Contact"}>
-          <li>Kontakt</li>{" "}
+          <li>Kontakt</li>
         </ScrollLink>
       </ul>
     </header>

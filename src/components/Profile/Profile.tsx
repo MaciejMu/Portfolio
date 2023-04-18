@@ -1,9 +1,9 @@
 import React from "react";
 import style from "./Profile.module.scss";
 import Image from "next/image";
-import image from "@/public/images/7f776081be1f74b87c17ae40bd0ba79e-sticker.png";
 import Button from "../Button/Button";
 import Link from "next/link";
+import ScrollLink from "../ScrollLink/ScrollLink";
 
 export const Profile = () => {
   return (
@@ -19,9 +19,22 @@ export const Profile = () => {
         <p>Cześć! nazywam się</p>
         <h2>Maciej Muter</h2>
         <h3>Frontend Developer</h3>
+        <p>Pracuję dla</p>
+        <a href={"https://www.scrumsoft.pl"}>
+          <Image
+            src={"/images/Scrumlogo.png"}
+            alt={"Scrumsoft logo"}
+            width={200}
+            height={100}
+            className={style.logo}
+          ></Image>
+        </a>
+
         <div className={style.buttonContainer}>
           <Button outlined title="Pobierz CV" />
-          <Button title="Kontakt" />
+          <ScrollLink href={"#Contact"}>
+            <Button title="Kontakt" />
+          </ScrollLink>
         </div>
         <Link href={"https://github.com/MaciejMu"}>
           <Image
