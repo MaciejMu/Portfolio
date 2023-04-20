@@ -72,6 +72,7 @@ export default function Home() {
               alt: "klon airbnb",
               title: "Airbnb",
               gitLink: "https://github.com/MaciejMu/Airbnb-tailwind",
+              demoLink: "https://lucky-haupia-8d9d79.netlify.app/",
             },
           ]}
         />
