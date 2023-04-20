@@ -10,13 +10,13 @@ const CheckedList: FC<CheckListProps> = ({ arr }) => {
   return (
     <ul className={style.list}>
       {arr.map((item) => (
-        <>
-          <li key={item.title}>
+        <div key={item.title}>
+          <li>
             <FontAwesomeIcon icon={faCircleCheck} className={style.checkIcon} />
             {item.title}
           </li>
           <p>{item.paragraph}</p>
-        </>
+        </div>
       ))}
     </ul>
   );

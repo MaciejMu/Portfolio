@@ -13,20 +13,16 @@ const Skills = () => {
         <CheckedList
           arr={[
             { title: "Next.js", paragraph: "3 msc" },
+            { title: "HTML", paragraph: "9 msc" },
             { title: "JavaScript", paragraph: "6 msc" },
-            { title: "CSS", paragraph: "9 msc" },
+            { title: "TypeScript", paragraph: "3 msc" },
           ]}
         />
         <CheckedList
           arr={[
             { title: " React", paragraph: "4 msc" },
-            { title: "HTML", paragraph: "9 msc" },
+            { title: "CSS", paragraph: "9 msc" },
             { title: "SASS", paragraph: "1 msc" },
-          ]}
-        />
-        <CheckedList
-          arr={[
-            { title: "TypeScript", paragraph: "3 msc" },
             { title: "Git", paragraph: "7 msc" },
           ]}
         />

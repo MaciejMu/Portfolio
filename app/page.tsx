@@ -21,11 +21,10 @@ export default function Home() {
         <Projects
           cardData={[
             {
-              image: "/images/projects/beers.png",
-              alt: "Beers page",
-              title: "Beers Ranking",
-              gitLink: "https://github.com/MaciejMu/BeersPage",
-              demoLink: "https://beers-page.vercel.app",
+              image: "/images/projects/portfolio.png",
+              alt: "strona portfolio",
+              title: "Portfolio",
+              gitLink: "https://github.com/MaciejMu/Portfolio",
             },
             {
               image: "/images/projects/slowko-win.png",
@@ -33,6 +32,13 @@ export default function Home() {
               title: "Słówko",
               gitLink: "https://github.com/MaciejMu/Slowko",
               demoLink: "https://maciej-muter-slowko.netlify.app/",
+            },
+            {
+              image: "/images/projects/beers.png",
+              alt: "Beers page",
+              title: "Beers Ranking",
+              gitLink: "https://github.com/MaciejMu/BeersPage",
+              demoLink: "https://beers-page.vercel.app",
             },
             {
               image: "/images/projects/calculator.png",
@@ -49,11 +55,23 @@ export default function Home() {
               demoLink: "https://maciej-muter-todo.netlify.app/",
             },
             {
+              image: "/images/projects/newslettersportowy.png",
+              alt: "newsletter sportowy",
+              title: "Newsletter sportowy",
+              demoLink: "https://newslettersportowy.pl/",
+            },
+            {
               image: "/images/projects/workout.png",
               alt: "workout map",
               title: "Workout Map",
               gitLink: "https://github.com/MaciejMu/WorkoutMap",
               demoLink: "https://workoutmap-maciejmuter.netlify.app/",
+            },
+            {
+              image: "/images/projects/airbnb.png",
+              alt: "klon airbnb",
+              title: "Airbnb",
+              gitLink: "https://github.com/MaciejMu/Airbnb-tailwind",
             },
           ]}
         />

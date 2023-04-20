@@ -12,8 +12,8 @@ type ProjectsProps = {
     image: string;
     alt: string;
     title: string;
-    gitLink: string;
-    demoLink: string;
+    gitLink?: string;
+    demoLink?: string;
   }[];
 };
 
@@ -45,12 +45,16 @@ const Projects: FC<ProjectsProps> = ({ cardData }) => {
               />
               <h3>{card.title}</h3>
               <div className={style.buttonContainer}>
-                <Link href={card.gitLink}>
-                  <Button outlined title={"Github repo"} />
-                </Link>
-                <Link href={card.demoLink}>
-                  <Button outlined title={"Live demo"} />
-                </Link>
+                {card.gitLink && (
+                  <Link href={card.gitLink}>
+                    <Button outlined title={"Github repo"} />
+                  </Link>
+                )}
+                {card.demoLink && (
+                  <Link href={card.demoLink}>
+                    <Button outlined title={"Live demo"} />
+                  </Link>
+                )}
               </div>
             </div>
           ))}
