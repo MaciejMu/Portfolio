@@ -5,14 +5,14 @@
 
   h3 {
     padding: 10px;
-    color: black;
+    color: var(--text);
   }
 }
 
 .card {
   text-align: center;
   padding: 30px 30px;
-  border: 1px solid black;
+  border: 1px solid var(--second);
   border-radius: 30px;
   width: max-content;
   animation: scroll 15s linear infinite;
@@ -21,7 +21,7 @@
 .cardImage {
   object-fit: cover;
   border-radius: 30px;
-  border: 1px solid black;
+  border: 1px solid var(--second);
 }
 
 .buttonContainer {

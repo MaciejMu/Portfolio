@@ -10,7 +10,8 @@
 }
 
 .memoji {
-  border: 1px solid black;
+  border: 1px solid var(--second);
+  box-shadow: var(--shadow-box);
   background: var(--gradient);
   // border-radius: 30px;
   border-radius: 50%;

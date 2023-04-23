@@ -2,6 +2,7 @@ import { Header } from "@/components/Header/Header";
 import { Poppins } from "next/font/google";
 import "../style/globals.css";
 import Footer from "@/components/Footer/Footer";
+import { Providers } from "@/components/Provider/Provider";
 
 export const metadata = {
   title: "Moje portfolio",
@@ -22,7 +23,7 @@ export default function RootLayout({
     <html lang="pl">
       <body className={poppins.className}>
         <Header />
-        {children}
+        <Providers>{children}</Providers>
         <Footer />
       </body>
     </html>

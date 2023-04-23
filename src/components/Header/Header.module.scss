@@ -6,7 +6,8 @@
   justify-content: space-between;
   padding: 0 20px;
   margin: 0 auto;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--second);
+  // box-shadow: var(--shadow-box);
 
   @media (min-width: 1200px) {
     padding: 0 150px;
@@ -26,7 +27,7 @@
     cursor: pointer;
     position: relative;
     font-size: 22px;
-    color: black;
+    color: var(--text);
     text-decoration: none;
   }
 
@@ -35,7 +36,8 @@
   }
 
   li:hover {
-    color: #8d8d8d;
+    color: var(--second);
+    transition: color 0.4s;
   }
 
   li:after {
@@ -46,7 +48,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #8d8d8d;
+    background-color: var(--second);
     transform-origin: bottom right;
     transition: transform 0.4s ease-out;
   }

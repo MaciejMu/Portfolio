@@ -7,27 +7,32 @@
     display: flex;
     align-items: center;
     padding: 20px 30px;
-    border: 1px solid black;
+    border: 1px solid var(--second);
     border-radius: 20px;
     margin: 20px;
-  }
 
-  a:hover {
-    transition: 0.3s ease-in-out;
-    background: black;
-    p {
-      color: white;
+    &:hover {
+      transition: 0.3s ease-in-out;
+      background: var(--gray-dark);
+
+      p {
+        color: white;
+      }
+
+      .contactIcon {
+        color: white;
+      }
     }
   }
 
   p {
-    color: black;
+    color: var(--text);
     padding-left: 30px;
   }
 }
 
 .contactIcon {
-  color: var(--gray-light);
+  color: var(--second);
   height: 40px;
   width: 40px;
 }
