@@ -1,1 +1,1 @@
-portfolio-maciejmu.vercel.app
+https://portfolio-maciejmu.vercel.app/
