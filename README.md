@@ -1,1 +1,1 @@
-https://portfolio-bgex45sco-maciejmu.vercel.app/
+portfolio-maciejmu.vercel.app
