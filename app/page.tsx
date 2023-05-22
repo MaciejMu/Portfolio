@@ -1,11 +1,22 @@
+"use client";
 import { Profile } from "@/components/Profile/Profile";
 import Container from "@/components/Container/Container";
 import Skills from "@/components/Skills/Skills";
 import AboutMe from "@/components/AboutMe/AboutMe";
 import Projects from "@/components/Projects/Projects";
 import Contact from "@/components/Contact/Contact";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-out-cubic",
+      offset: 200,
+      duration: 600,
+    });
+  }, []);
   return (
     <main>
       <Container>

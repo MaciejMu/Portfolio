@@ -19,13 +19,13 @@ type ProjectsProps = {
 
 const Projects: FC<ProjectsProps> = ({ cardData }) => {
   return (
-    <>
+    <div className={style.container}>
       <SectionHeader
         title={"Projekty"}
         paragraph={"przejrzyj moje"}
         id="Projects"
       />
-      <section className={style.section}>
+      <section className={style.section} data-aos="fade-right">
         <Carousel
           show={3.5}
           slide={2}
@@ -60,7 +60,7 @@ const Projects: FC<ProjectsProps> = ({ cardData }) => {
           ))}
         </Carousel>
       </section>
-    </>
+    </div>
   );
 };
 

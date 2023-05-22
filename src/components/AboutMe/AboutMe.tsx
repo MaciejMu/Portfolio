@@ -2,9 +2,9 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 import Image from "next/image";
 import style from "./AboutMe.module.scss";
 
-const AboutMe = ({}) => {
+const AboutMe = () => {
   return (
-    <section className={style.container} id="AboutMe">
+    <section className={style.container} id="AboutMe" data-aos="fade-left">
       <SectionHeader title={"O mnie"} paragraph={"poczytaj"} />
 
       <div className={style.content}>

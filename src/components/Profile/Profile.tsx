@@ -7,7 +7,7 @@ import ScrollLink from "../ScrollLink/ScrollLink";
 
 export const Profile = () => {
   return (
-    <section className={style.section}>
+    <section className={style.section} data-aos="fade-right">
       <Image
         className={style.memoji}
         src={"/images/7f776081be1f74b87c17ae40bd0ba79e-sticker.png"}

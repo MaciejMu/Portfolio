@@ -4,7 +4,7 @@ import style from "./Header.module.scss";
 
 export const Header = () => {
   return (
-    <header className={style.header}>
+    <header className={style.header} data-aos="fade-down" data-aos-delay="400">
       <h1>Maciek</h1>
       <ul>
         <ScrollLink href={"#AboutMe"}>

@@ -3,7 +3,12 @@ import style from "./Footer.module.scss";
 
 const Footer = () => {
   return (
-    <footer className={style.footer}>
+    <footer
+      className={style.footer}
+      data-aos="fade-up"
+      data-aos-delay="400"
+      data-aos-offset="-100"
+    >
       <ul>
         <Link href={"#AboutMe"}>
           <li> O mnie</li>
@@ -13,9 +18,6 @@ const Footer = () => {
         </Link>
         <Link href={"#Projects"}>
           <li>Portfolio</li>
-        </Link>
-        <Link href={"#Contact"}>
-          <li>Kontakt</li>
         </Link>
       </ul>
     </footer>

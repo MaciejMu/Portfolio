@@ -7,7 +7,7 @@ import SimpleContact from "../SimpleContact/SimpleContact";
 
 const Contact = () => {
   return (
-    <section>
+    <section data-aos="fade-left">
       <SectionHeader title={"Kontakt"} paragraph={"złap ze mną"} id="Contact" />
       <div className={style.container}>
         <Image

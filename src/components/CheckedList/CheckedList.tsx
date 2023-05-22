@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import style from "./CheckedList.module.scss";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DataCounter from "../DataCounter/DataCounter";
 
 type CheckListProps = {
   arr: { title: string; paragraph: string }[];
@@ -15,7 +16,7 @@ const CheckedList: FC<CheckListProps> = ({ arr }) => {
             <FontAwesomeIcon icon={faCircleCheck} className={style.checkIcon} />
             {item.title}
           </li>
-          <p>{item.paragraph}</p>
+          <DataCounter startDate={item.paragraph}></DataCounter>
         </div>
       ))}
     </ul>
