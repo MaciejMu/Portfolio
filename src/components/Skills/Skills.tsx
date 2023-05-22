@@ -13,7 +13,7 @@ const Skills = () => {
           arr={[
             { title: "Next.js", paragraph: "2023-02-14" },
             { title: "HTML", paragraph: "2022-07-17" },
-            { title: "JavaScript", paragraph: "2022-11-8" },
+            { title: "JavaScript", paragraph: "2022-11-08" },
             { title: "TypeScript", paragraph: "2023-01-31" },
           ]}
         />

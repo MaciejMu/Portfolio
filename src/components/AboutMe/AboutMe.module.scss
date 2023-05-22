@@ -20,4 +20,10 @@
 
 .memoji {
   transform: translateY(-10%);
+  max-width: 90vw;
+
+  @media (max-width: 800px) {
+    height: auto;
+    margin: auto;
+  }
 }

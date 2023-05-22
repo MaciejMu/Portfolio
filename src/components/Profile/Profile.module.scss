@@ -30,8 +30,11 @@
   border: 1px solid var(--second);
   box-shadow: var(--shadow-box);
   border-radius: 50%;
-  width: auto;
   max-width: 90vw;
+
+  @media (max-width: 800px) {
+    height: auto;
+  }
 }
 
 .logo {
@@ -39,7 +42,7 @@
   height: auto;
   margin-top: 10px;
   width: 200px;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 20px;
   border: 1px solid var(--second);
   background: white;
@@ -50,6 +53,5 @@
   width: auto;
   cursor: pointer;
   border-radius: 50%;
-  // box-shadow: var(--shadow-box);
   background: white;
 }
