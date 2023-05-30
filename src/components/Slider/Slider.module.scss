@@ -1,0 +1,113 @@
+.container {
+  position: relative;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  max-width: 1300px;
+  margin: auto;
+  margin-bottom: 120px;
+}
+
+.inner {
+  width: 100vw;
+  height: 60vw;
+  display: flex;
+  transition: transform 0.6s;
+
+  @media (min-width: 1200px) {
+    height: 40vh;
+    min-width: 30vw;
+  }
+
+  @media (min-width: 1500px) {
+    height: 30vh;
+    min-width: 20vw;
+  }
+}
+
+.caruselItem {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  min-width: 50vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5vw;
+  border-radius: 20px;
+  border: 1px solid var(--second);
+
+  @media (min-width: 1200px) {
+  }
+
+  @media (min-width: 1500px) {
+    min-width: 20vw;
+  }
+
+  &:hover > .image {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.03);
+    filter: brightness(40%);
+  }
+
+  &:hover > .properties {
+    transition: all 0.5s ease-in-out;
+    display: flex;
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid black;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.properties {
+  transition: all 0.5s ease-in-out;
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 35%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    gap: 20px;
+  }
+}
+
+.arrowLeft {
+  color: (var(--main));
+  background: radial-gradient(var(--second), #fefefe00);
+  position: absolute;
+  top: 40%;
+  left: 1vw;
+  font-size: 30px;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.arrowRight {
+  color: (var(--main));
+  background: radial-gradient(var(--second), #fefefe00);
+  position: absolute;
+  top: 40%;
+  right: 1vw;
+  font-size: 30px;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 10px;
+}
