@@ -30,7 +30,7 @@ const Slider: FC<SliderProps> = ({ slideData }) => {
   };
 
   return (
-    <div className={style.container}>
+    <div className={style.container} data-aos="fade-right">
       <div
         className={style.inner}
         style={{ transform: `translateX(-${slide * 100}%)` }}
