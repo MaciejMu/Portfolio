@@ -1,7 +1,7 @@
 :root {
   --main: #ffff;
   --second: #000000;
-  --gray-light: #8d8d8d;
+  --gray-light: #757575;
   --gray-dark: #353535;
   --text: black;
   --shadow-box: none;
@@ -16,7 +16,7 @@
 [data-theme="dark"] {
   --main: black;
   --second: #00ff4c;
-  /* --gray-light: #03a634; */
+  --gray-light: #03a634;
   --gray-dark: #028d2b;
   --text: #ffff;
   --shadow-box: inset 0 0 0 #fff, 0 0 10px var(--second),
@@ -41,6 +41,10 @@ body {
   overflow-x: hidden;
   background: var(--main);
   transition: 0.8s;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

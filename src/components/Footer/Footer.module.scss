@@ -7,22 +7,22 @@
   padding: 0 20px;
   margin: 0 auto;
 
-  ul {
+  .list {
     display: flex;
     gap: 30px;
     list-style: none;
+
+    p {
+      cursor: pointer;
+      position: relative;
+      font-size: 22px;
+      color: var(--text);
+    }
 
     @media (max-width: 568px) {
       margin-top: 50px;
       flex-direction: column;
     }
-  }
-
-  li {
-    cursor: pointer;
-    position: relative;
-    font-size: 22px;
-    color: var(--text);
   }
 
   a {

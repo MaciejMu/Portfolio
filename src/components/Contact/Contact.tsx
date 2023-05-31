@@ -12,8 +12,8 @@ const Contact = () => {
       <div className={style.container}>
         <Image
           src={"/images/contact.png"}
-          width={400}
-          height={400}
+          width={398}
+          height={398}
           alt={"memoji"}
           className={style.memoji}
         />

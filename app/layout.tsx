@@ -7,6 +7,7 @@ import { Providers } from "@/components/Provider/Provider";
 export const metadata = {
   title: "Moje portfolio",
   description: "Moje portfolio - Maciej Muter",
+  lang: "pl",
 };
 
 const poppins = Poppins({

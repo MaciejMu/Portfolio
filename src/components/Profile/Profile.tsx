@@ -12,8 +12,8 @@ export const Profile = () => {
         className={style.memoji}
         src={"/images/7f776081be1f74b87c17ae40bd0ba79e-sticker.png"}
         alt={"memoji"}
-        width={400}
-        height={400}
+        width={398}
+        height={398}
       />
       <div>
         <p>Cześć! nazywam się</p>

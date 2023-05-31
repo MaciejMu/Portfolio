@@ -29,9 +29,7 @@ export default function Home() {
       <Container>
         <Skills />
       </Container>
-      {/* <Container> */}
       <Projects />
-      {/* </Container> */}
       <Slider
         slideData={[
           {
