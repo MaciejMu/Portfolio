@@ -3,11 +3,11 @@ import { Poppins } from "next/font/google";
 import "../style/globals.css";
 import Footer from "@/components/Footer/Footer";
 import { Providers } from "@/components/Provider/Provider";
+import { ReactNode } from "react";
 
 export const metadata = {
   title: "Moje portfolio",
   description: "Moje portfolio - Maciej Muter",
-  lang: "pl",
 };
 
 const poppins = Poppins({
@@ -15,13 +15,9 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html>
+    <html lang="pl">
       <body className={poppins.className}>
         <Providers>
           <Header />

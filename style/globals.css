@@ -16,7 +16,7 @@
 [data-theme="dark"] {
   --main: black;
   --second: #00ff4c;
-  --gray-light: #03a634;
+  /* --gray-light: #03a634; */
   --gray-dark: #028d2b;
   --text: #ffff;
   --shadow-box: inset 0 0 0 #fff, 0 0 10px var(--second),
