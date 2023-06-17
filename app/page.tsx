@@ -64,6 +64,14 @@ export default function Home() {
           },
           {
             id: 5,
+            image: "/images/projects/waiter-helper.png",
+            alt: "WaiterHelper",
+            title: "WaiterHelper",
+            gitLink: "https://github.com/MaciejMu/WaiterHelper",
+            demoLink: "https://lucky-haupia-8d9d79.netlify.app/",
+          },
+          {
+            id: 6,
             image: "/images/projects/todo.png",
             alt: " aplikacja todo",
             title: "Todo",
@@ -71,7 +79,7 @@ export default function Home() {
             demoLink: "https://maciej-muter-todo.netlify.app/",
           },
           {
-            id: 6,
+            id: 7,
             image: "/images/projects/calculator.png",
             alt: "kalkulator",
             title: "Kalkulator",
@@ -79,27 +87,19 @@ export default function Home() {
             demoLink: "https://inspiring-heliotrope-5dba82.netlify.app/",
           },
           {
-            id: 67,
+            id: 8,
             image: "/images/projects/newslettersportowy.png",
             alt: "newsletter sportowy",
             title: "Newsletter sportowy",
             demoLink: "https://newslettersportowy.pl/",
           },
           {
-            id: 8,
+            id: 9,
             image: "/images/projects/workout.png",
             alt: "workout map",
             title: "Workout Map",
             gitLink: "https://github.com/MaciejMu/WorkoutMap",
             demoLink: "https://workoutmap-maciejmuter.netlify.app/",
-          },
-          {
-            id: 9,
-            image: "/images/projects/airbnb.png",
-            alt: "klon airbnb",
-            title: "Airbnb",
-            gitLink: "https://github.com/MaciejMu/Airbnb-tailwind",
-            demoLink: "https://lucky-haupia-8d9d79.netlify.app/",
           },
         ]}
       />

@@ -19,7 +19,7 @@ const AboutMe = () => {
           projektu, to właśnie mnie szukasz!
         </p>
         <Image
-          src={"/images/722578df019472e43f905f395cfe68bb-sticker.png"}
+          src={"/memojis/about-me.png"}
           width={400}
           height={400}
           alt={"memoji"}

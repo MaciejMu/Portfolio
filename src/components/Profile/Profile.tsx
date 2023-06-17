@@ -10,7 +10,7 @@ export const Profile = () => {
     <section className={style.section} data-aos="fade-right">
       <Image
         className={style.memoji}
-        src={"/images/7f776081be1f74b87c17ae40bd0ba79e-sticker.png"}
+        src={"/memojis/profile.png"}
         alt={"memoji"}
         width={398}
         height={398}
