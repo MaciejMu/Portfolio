@@ -3,109 +3,123 @@ import React, { ChangeEvent, FormEvent, useState } from "react";
 import Button from "../Button/Button";
 import style from "./ContactForm.module.scss";
 import { validate } from "../../../utilis/validate";
+import axios from "axios";
+import Input from "../Input/Input";
+import TextArea from "../TextArea/TextArea";
+
+interface IValues {
+  fullname: string;
+  phone: string;
+  email: string;
+  message: string;
+}
+interface IErrors extends Partial<IValues> {}
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
+  const [values, setValues] = useState({
     fullname: "",
     phone: "",
     email: "",
     message: "",
   });
-  const [errors, setErrors] = useState<{
-    fullname?: string;
-    phone?: string;
-    email?: string;
-    message?: string;
-  }>({});
+  const [errors, setErrors] = useState<IErrors>({});
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [messageState, setMessageState] = useState("");
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const errors = validate(formData);
+    const errors = validate(values);
     if (errors && Object.keys(errors).length > 0) {
       return setErrors(errors);
     }
     setErrors({});
-    try {
-      const res = await fetch("/api/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+    setLoading(true);
+    await axios
+      .post("/api/mail", {
+        fullname: values.fullname,
+        phone: values.phone,
+        email: values.email,
+        message: values.message,
+      })
+      .then((res) => {
+        if (res.status === 200) {
+          setValues({ fullname: "", phone: "", email: "", message: "" });
+          setLoading(false);
+          setSuccess(true);
+          setMessageState(res.data.message);
+        } else {
+          setLoading(false);
+          setMessageState(res.data.message);
+        }
+      })
+      .catch((err) => {
+        setLoading(false);
+        setMessageState(String(err.message));
       });
-      if (res.ok) {
-        setFormData({ fullname: "", phone: "", email: "", message: "" });
-      }
-    } catch (error) {
-      console.error(error);
-    }
   };
-
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setValues((prevInput) => ({
+      ...prevInput,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   return (
-    <>
-      <form className={style.form} onSubmit={handleSubmit}>
-        <div className={style.personalData}>
-          <label htmlFor="fullname">
-            Imię i nazwisko
-            <input
-              type="text"
-              name="fullname"
-              value={formData.fullname}
-              onChange={handleChange}
-              // required
-            ></input>
-            {errors.fullname ? (
-              <p className={style.errorMsg}>*{errors.fullname}</p>
-            ) : null}
-          </label>
+    <form onSubmit={handleSubmit} className={style.form}>
+      <div className={style.personalData}>
+        <Input
+          value={values.fullname}
+          onChange={handleChange}
+          id="fullname"
+          name="fullname"
+          label="Imię i Nazwisko"
+          // placeholder="John Doe"
+          error={!!errors.fullname}
+          errorMessage={!!errors.fullname ? errors.fullname : ""}
+        />
+        <Input
+          value={values.phone}
+          onChange={handleChange}
+          id="phone"
+          name="phone"
+          label="Numer telefonu"
+          // placeholder="John Doe"
+          error={!!errors.phone}
+          errorMessage={!!errors.phone ? errors.phone : ""}
+        />
+      </div>
+      <Input
+        value={values.email}
+        onChange={handleChange}
+        id="email"
+        name="email"
+        label="Adres Email"
+        // placeholder="you@example.com"
+        error={!!errors.email}
+        errorMessage={!!errors.email ? errors.email : ""}
+      />
+      <TextArea
+        value={values.message}
+        onChange={handleChange}
+        id="message"
+        name="message"
+        label="Wiadomość"
+        error={!!errors.message}
+        errorMessage={!!errors.message ? errors.message : ""}
+      />
+      <Button
+        type="submit"
+        title={loading !== true ? "Wyślij" : "Wysyłanie..."}
+        disabled={loading}
+      />
 
-          <label htmlFor="phone">
-            Numer telefonu
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              // required
-            ></input>
-            {errors.phone ? (
-              <p className={style.errorMsg}>*{errors.phone}</p>
-            ) : null}
-          </label>
-        </div>
-        <label htmlFor="email">
-          Adres e-mail
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            // required
-          ></input>
-          {errors.email ? (
-            <p className={style.errorMsg}>*{errors.email}</p>
-          ) : null}
-        </label>
-        <label htmlFor="message">
-          Wiadomość
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-          ></textarea>
-          {errors.message ? (
-            <p className={style.errorMsg}>*{errors.message}</p>
-          ) : null}
-        </label>
-        <div className={style.button}>
-          <Button type="submit" title="wyślij" outlined />
-        </div>
-      </form>
-    </>
+      <p>{success !== false ? messageState : <span>{messageState}</span>}</p>
+    </form>
   );
 };
 

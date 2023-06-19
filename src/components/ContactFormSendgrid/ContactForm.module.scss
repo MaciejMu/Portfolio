@@ -7,7 +7,6 @@
   gap: 20px;
   text-align: center;
   max-width: 100vw;
-  // margin: auto;
 
   label {
     display: flex;
@@ -49,10 +48,4 @@
   input {
     width: 90%;
   }
-}
-
-.errorMsg {
-  color: red;
-  font-size: 12px;
-  padding-top: 5 px;
 }
