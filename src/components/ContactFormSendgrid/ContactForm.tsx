@@ -36,7 +36,7 @@ const ContactForm = () => {
     setErrors({});
     setLoading(true);
     await axios
-      .post("/api/mail", {
+      .post("/api", {
         fullname: values.fullname,
         phone: values.phone,
         email: values.email,

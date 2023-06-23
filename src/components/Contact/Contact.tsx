@@ -17,8 +17,8 @@ const Contact = () => {
           alt={"memoji"}
           className={style.memoji}
         />
-        <SimpleContact />
-        {/* <ContactForm /> */}
+        {/* <SimpleContact /> */}
+        <ContactForm />
       </div>
     </section>
   );
