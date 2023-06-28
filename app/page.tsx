@@ -40,8 +40,8 @@ export default function Home() {
           },
           {
             image: "/images/projects/waiter-helper.png",
-            alt: "WaiterHelper",
-            title: "WaiterHelper",
+            alt: "Waiter Helper aplikacja dla kelnerów",
+            title: "Waiter Helper",
             gitLink: "https://github.com/MaciejMu/WaiterHelper",
             demoLink: "https://lucky-haupia-8d9d79.netlify.app/",
           },
