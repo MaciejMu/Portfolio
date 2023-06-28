@@ -33,37 +33,12 @@ export default function Home() {
       <Slider
         slideData={[
           {
-            id: 1,
             image: "/images/projects/portfolio.png",
             alt: "strona portfolio",
             title: "Portfolio",
             gitLink: "https://github.com/MaciejMu/Portfolio",
           },
           {
-            id: 2,
-            image: "/images/projects/slowko-win.png",
-            alt: "gra słówko",
-            title: "Słówko",
-            gitLink: "https://github.com/MaciejMu/Slowko",
-            demoLink: "https://maciej-muter-slowko.netlify.app/",
-          },
-          {
-            id: 3,
-            image: "/images/projects/brokers.png",
-            alt: "constans broker",
-            title: "Constans Broker",
-            demoLink: "https://constans-broker.vercel.app/",
-          },
-          {
-            id: 4,
-            image: "/images/projects/beers.png",
-            alt: "Beers page",
-            title: "Beers Ranking",
-            gitLink: "https://github.com/MaciejMu/BeersPage",
-            demoLink: "https://beers-page.vercel.app",
-          },
-          {
-            id: 5,
             image: "/images/projects/waiter-helper.png",
             alt: "WaiterHelper",
             title: "WaiterHelper",
@@ -71,7 +46,26 @@ export default function Home() {
             demoLink: "https://lucky-haupia-8d9d79.netlify.app/",
           },
           {
-            id: 6,
+            image: "/images/projects/slowko-win.png",
+            alt: "gra słówko",
+            title: "Słówko",
+            gitLink: "https://github.com/MaciejMu/Slowko",
+            demoLink: "https://maciej-muter-slowko.netlify.app/",
+          },
+          {
+            image: "/images/projects/brokers.png",
+            alt: "constans broker",
+            title: "Constans Broker",
+            demoLink: "https://constans-broker.vercel.app/",
+          },
+          {
+            image: "/images/projects/beers.png",
+            alt: "Beers page",
+            title: "Beers Ranking",
+            gitLink: "https://github.com/MaciejMu/BeersPage",
+            demoLink: "https://beers-page.vercel.app",
+          },
+          {
             image: "/images/projects/todo.png",
             alt: " aplikacja todo",
             title: "Todo",
@@ -79,7 +73,6 @@ export default function Home() {
             demoLink: "https://maciej-muter-todo.netlify.app/",
           },
           {
-            id: 7,
             image: "/images/projects/calculator.png",
             alt: "kalkulator",
             title: "Kalkulator",
@@ -87,14 +80,6 @@ export default function Home() {
             demoLink: "https://inspiring-heliotrope-5dba82.netlify.app/",
           },
           {
-            id: 8,
-            image: "/images/projects/newslettersportowy.png",
-            alt: "newsletter sportowy",
-            title: "Newsletter sportowy",
-            demoLink: "https://newslettersportowy.pl/",
-          },
-          {
-            id: 9,
             image: "/images/projects/workout.png",
             alt: "workout map",
             title: "Workout Map",

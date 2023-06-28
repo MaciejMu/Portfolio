@@ -6,7 +6,7 @@ type ButtonProps = {
   title: string;
   outlined?: boolean;
   type?: "button" | "submit" | "reset" | undefined;
-  disabled: boolean;
+  disabled?: boolean;
 };
 
 const Button: FC<ButtonProps> = ({ title, outlined, type, disabled }) => {

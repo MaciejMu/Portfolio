@@ -1,5 +1,5 @@
 "use client";
-import { FC, useState } from "react";
+import { FC, useEffect, useLayoutEffect, useRef, useState } from "react";
 import React from "react";
 import Image from "next/image";
 import style from "./Slider.module.scss";
@@ -9,7 +9,6 @@ import Button from "../Button/Button";
 
 type SliderProps = {
   slideData: {
-    id?: number;
     image: string;
     title: string;
     alt: string;
@@ -19,25 +18,51 @@ type SliderProps = {
 };
 
 const Slider: FC<SliderProps> = ({ slideData }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [slideWidth, setSlideWidth] = useState(0);
   const [slide, setSlide] = useState(0);
 
   const nextSlide = () => {
-    setSlide(slide < slideData.length / 2 ? slide + 1 : 0);
+    setSlide((slide) => (slide < slideData.length - 1 ? slide + 1 : 0));
   };
 
   const prevSlide = () => {
-    setSlide(slide > 0 ? slide - 1 : slideData.length / 2);
+    setSlide((slide) => (slide > 0 ? slide - 1 : slideData.length - 1));
   };
+
+  useLayoutEffect(() => {
+    if (ref.current) {
+      setSlideWidth(ref.current.clientWidth);
+    }
+  }, []);
+
+  useEffect(() => {
+    function handleWindowResize() {
+      if (ref.current) {
+        setSlideWidth(ref.current.clientWidth);
+      }
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   return (
     <div className={style.container} data-aos="fade-right">
       <div
         className={style.inner}
-        style={{ transform: `translateX(-${slide * 100}%)` }}
+        style={{
+          transform: `translateX(calc(-${
+            slideWidth * slide
+          }px - 10vw * ${slide} ))`,
+        }}
       >
-        {slideData.map((slide) => {
+        {slideData.map((slide, i) => {
           return (
-            <div key={slide.id} className={style.caruselItem}>
+            <div key={i} className={style.caruselItem} ref={ref}>
               <Image
                 height={500}
                 width={500}
