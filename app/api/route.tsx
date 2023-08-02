@@ -1,8 +1,7 @@
-import mail from '@sendgrid/mail';
-import { NextResponse } from 'next/server';
+import mail from "@sendgrid/mail";
+import { NextResponse } from "next/server";
 
-const apiKey= process.env.SENDGRID_API_KEY || ''
-console.log(apiKey)
+const apiKey = process.env.SENDGRID_API_KEY || "";
 mail.setApiKey(apiKey);
 
 type ResponseData = {
@@ -21,25 +20,24 @@ export async function POST(request: Request) {
     Message: ${body.message}`;
 
   const data = {
-    to: 'maciejmuter@gmail.com',
-    from: 'maciejmuter@gmail.com',
-    subject: 'Wiadomość ze strony portfolio',
+    to: "maciejmuter@gmail.com",
+    from: "maciejmuter@gmail.com",
+    subject: "Wiadomość ze strony portfolio",
     text: message,
-    html: message.replace(/\r\n/g, '<br>'),
+    html: message.replace(/\r\n/g, "<br>"),
   };
-
 
   await mail
     .send(data)
     .then(() => {
       response = {
-        status: 'success',
+        status: "success",
         message: "Twoja wiadomość została wysłana",
       };
     })
     .catch((error) => {
       response = {
-        status: 'error',
+        status: "error",
         message: `Błąd: ${error}`,
       };
     });
