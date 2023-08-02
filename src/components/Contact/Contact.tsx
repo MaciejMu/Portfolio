@@ -3,7 +3,6 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 import Image from "next/image";
 import style from "./Contact.module.scss";
 import ContactForm from "../ContactFormSendgrid/ContactForm";
-import SimpleContact from "../SimpleContact/SimpleContact";
 
 const Contact = () => {
   return (
@@ -17,8 +16,8 @@ const Contact = () => {
           alt={"memoji"}
           className={style.memoji}
         />
-        <SimpleContact />
-        {/* <ContactForm /> */}
+        {/* <SimpleContact /> */}
+        <ContactForm />
       </div>
     </section>
   );

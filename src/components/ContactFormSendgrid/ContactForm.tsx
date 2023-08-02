@@ -48,6 +48,7 @@ const ContactForm = () => {
           setLoading(false);
           setSuccess(true);
           setMessageState(res.data.message);
+          setTimeout(()=>setSuccess(false),3000)
         } else {
           setLoading(false);
           setMessageState(res.data.message);
@@ -78,7 +79,7 @@ const ContactForm = () => {
           id="fullname"
           name="fullname"
           label="Imię i Nazwisko"
-          // placeholder="John Doe"
+          placeholder="Robert Kubica"
           error={!!errors.fullname}
           errorMessage={!!errors.fullname ? errors.fullname : ""}
         />
@@ -87,8 +88,8 @@ const ContactForm = () => {
           onChange={handleChange}
           id="phone"
           name="phone"
-          label="Numer telefonu"
-          // placeholder="John Doe"
+          label="Numer Telefonu"
+          placeholder="000 000 000"
           error={!!errors.phone}
           errorMessage={!!errors.phone ? errors.phone : ""}
         />
@@ -99,7 +100,7 @@ const ContactForm = () => {
         id="email"
         name="email"
         label="Adres Email"
-        // placeholder="you@example.com"
+        placeholder="twójadres@mail.com"
         error={!!errors.email}
         errorMessage={!!errors.email ? errors.email : ""}
       />
@@ -109,16 +110,16 @@ const ContactForm = () => {
         id="message"
         name="message"
         label="Wiadomość"
+        placeholder="Napisz do mnie..."
         error={!!errors.message}
         errorMessage={!!errors.message ? errors.message : ""}
       />
       <Button
         type="submit"
-        title={loading !== true ? "Wyślij" : "Wysyłanie..."}
+        title={loading ? "Wysyłanie..." : "Wyślij"}
         disabled={loading}
       />
-
-      <p>{success !== false ? messageState : <span>{messageState}</span>}</p>
+      <p>{success ? <span>{messageState}</span> : null}</p>
     </form>
   );
 };

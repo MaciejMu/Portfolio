@@ -11,12 +11,20 @@
     display: flex;
     gap: 30px;
     list-style: none;
+    align-items: center;
 
     p {
       cursor: pointer;
       position: relative;
       font-size: 22px;
       color: var(--text);
+      transition: all 0.3s ease-in-out;
+
+
+      &:hover {
+        font-size: 28px;
+        transition: all 0.3s ease-in-out;
+      }
     }
 
     @media (max-width: 568px) {

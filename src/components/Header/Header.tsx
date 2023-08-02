@@ -5,7 +5,6 @@ import style from "./Header.module.scss";
 export const Header = () => {
   return (
     <header className={style.header} data-aos="fade-down" data-aos-delay="400">
-      <h1>Maciek</h1>
       <div className={style.list}>
         <ScrollLink href={"#AboutMe"} aria-label="Informacje o mnie">
           <p>O mnie</p>
