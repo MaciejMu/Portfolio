@@ -31,7 +31,6 @@ export const Profile = () => {
         </a>
 
         <div className={style.buttonContainer}>
-          <Button outlined title="Pobierz CV" />
           <ScrollLink href={"#Contact"}>
             <Button title="Kontakt" />
           </ScrollLink>

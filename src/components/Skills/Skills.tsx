@@ -15,6 +15,7 @@ const Skills = () => {
             { title: "HTML", paragraph: "2022-07-17" },
             { title: "JavaScript", paragraph: "2022-11-08" },
             { title: "TypeScript", paragraph: "2023-01-31" },
+            { title: "Node.js", paragraph: "2023-07-17" },
           ]}
         />
         <CheckedList
