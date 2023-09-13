@@ -33,17 +33,18 @@ export default function Home() {
       <Slider
         slideData={[
           {
-            image: "/images/projects/portfolio.png",
-            alt: "strona portfolio",
-            title: "Portfolio",
-            gitLink: "https://github.com/MaciejMu/Portfolio",
+            image: "/images/projects/my-recipe.png",
+            alt: "My Recipe strona z przepisami",
+            title: "MyRecipe",
+            gitLink: "https://github.com/MaciejMu/MyRecipe",
+            demoLink: "https://my-recipe-maciejmu.vercel.app/",
           },
           {
             image: "/images/projects/waiter-helper.png",
             alt: "Waiter Helper aplikacja dla kelnerów",
             title: "Waiter Helper",
             gitLink: "https://github.com/MaciejMu/WaiterHelper",
-            demoLink: "https://lucky-haupia-8d9d79.netlify.app/",
+            demoLink: "https://waiter-helper.vercel.app/",
           },
           {
             image: "/images/projects/slowko-win.png",
@@ -57,6 +58,12 @@ export default function Home() {
             alt: "constans broker",
             title: "Constans Broker",
             demoLink: "https://constans-broker.vercel.app/",
+          },
+          {
+            image: "/images/projects/portfolio.png",
+            alt: "strona portfolio",
+            title: "Portfolio",
+            gitLink: "https://github.com/MaciejMu/Portfolio",
           },
           {
             image: "/images/projects/beers.png",
