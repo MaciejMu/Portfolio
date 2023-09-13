@@ -1,9 +1,10 @@
 import { Header } from "@/components/Header/Header";
 import { Poppins } from "next/font/google";
-import "../style/globals.css";
+import "@/style/globals.css";
 import Footer from "@/components/Footer/Footer";
 import { Providers } from "@/components/Provider/Provider";
 import { ReactNode } from "react";
+import { languages } from "../i18n/settings";
 
 export const metadata = {
   title: "Moje portfolio",
@@ -15,9 +16,19 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }));
+}
+
+export default function RootLayout({
+  children,
+  params: { lng },
+}: {
+  children: ReactNode;
+  params: { lng: string };
+}) {
   return (
-    <html lang="pl">
+    <html lang={lng}>
       <body className={poppins.className}>
         <Providers>
           <Header />

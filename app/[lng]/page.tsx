@@ -10,7 +10,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Slider from "@/components/Slider/Slider";
 
-export default function Home() {
+export default function Home({ params: { lng } }: { params: { lng: string } }) {
   useEffect(() => {
     AOS.init({
       easing: "ease-out-cubic",

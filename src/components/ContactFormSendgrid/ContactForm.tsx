@@ -2,7 +2,7 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import Button from "../Button/Button";
 import style from "./ContactForm.module.scss";
-import { validate } from "../../../utilis/validate";
+import { validate } from "../../utilis/validate";
 import axios from "axios";
 import Input from "../Input/Input";
 import TextArea from "../TextArea/TextArea";
@@ -48,7 +48,7 @@ const ContactForm = () => {
           setLoading(false);
           setSuccess(true);
           setMessageState(res.data.message);
-          setTimeout(()=>setSuccess(false),3000)
+          setTimeout(() => setSuccess(false), 3000);
         } else {
           setLoading(false);
           setMessageState(res.data.message);
