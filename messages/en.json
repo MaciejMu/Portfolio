@@ -48,6 +48,31 @@
     "mail-placeholder": "youremail@mail.com",
     "message": "Message",
     "message-placeholder": "Write to me...",
-    "button-title": { "sending": "Sending...", "send": "Send" }
+    "button-title": { "sending": "Sending...", "send": "Send" },
+    "validate-messages": {
+      "fullname": "Full name is required",
+      "email": "Email is required",
+      "invalid-email": "Invalid email address",
+      "phone": "Phone number is required",
+      "invalid-phone": "Invalid phone number",
+      "message": "Message is required"
+    }
+  },
+  "Footer": {
+    "about-me": {
+      "href": "#AboutMe",
+      "aria-label": "Information about me",
+      "title": "About me"
+    },
+    "skills": {
+      "href": "#Skills",
+      "aria-label": "Technologies I know",
+      "title": "Experience"
+    },
+    "projects": {
+      "href": "#Projects",
+      "aria-label": "My projects",
+      "title": "Portfolio"
+    }
   }
 }

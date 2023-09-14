@@ -2,11 +2,11 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import Button from "../Button/Button";
 import style from "./ContactForm.module.scss";
-import { validate } from "../../utilis/validate";
 import axios from "axios";
 import Input from "../Input/Input";
 import TextArea from "../TextArea/TextArea";
 import { useTranslations } from "next-intl";
+import validate from "@/utilis/validate";
 
 interface IValues {
   fullname: string;
@@ -84,7 +84,7 @@ const ContactForm = () => {
           label={t("fullname")}
           placeholder="Robert Kubica"
           error={!!errors.fullname}
-          errorMessage={!!errors.fullname ? errors.fullname : ""}
+          errorMessage={!!errors.fullname ? t(errors.fullname) : ""}
         />
         <Input
           value={values.phone}
@@ -95,7 +95,7 @@ const ContactForm = () => {
           label={t("phone")}
           placeholder="000 000 000"
           error={!!errors.phone}
-          errorMessage={!!errors.phone ? errors.phone : ""}
+          errorMessage={!!errors.phone ? t(errors.phone) : ""}
         />
       </div>
       <Input
@@ -106,7 +106,7 @@ const ContactForm = () => {
         label={t("mail")}
         placeholder={t("mail-placeholder")}
         error={!!errors.email}
-        errorMessage={!!errors.email ? errors.email : ""}
+        errorMessage={!!errors.email ? t(errors.email) : ""}
       />
       <TextArea
         value={values.message}
@@ -116,7 +116,7 @@ const ContactForm = () => {
         label={t("message")}
         placeholder={t("message-placeholder")}
         error={!!errors.message}
-        errorMessage={!!errors.message ? errors.message : ""}
+        errorMessage={!!errors.message ? t(errors.message) : ""}
       />
       <Button
         type="submit"

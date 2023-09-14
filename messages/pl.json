@@ -46,8 +46,9 @@
     "validate-messages": {
       "fullname": "Imię i nazwisko wymagane",
       "email": "Email wymagany",
-      "wrong-email": "Nieprawidłowy adres email",
+      "invalid-email": "Nieprawidłowy adres email",
       "phone": "Numer telefonu wymagany",
+      "invalid-phone": "Nieprawidłowy numer telefonu",
       "message": "Wiadomość wymagana"
     }
   },
@@ -59,7 +60,7 @@
     },
     "skills": {
       "href": "#Skills",
-      "aria-label": "Technogogie które znam",
+      "aria-label": "Technologie które znam",
       "title": "Doświadczenie"
     },
     "projects": {

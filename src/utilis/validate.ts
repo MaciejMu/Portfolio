@@ -1,4 +1,6 @@
-export const validate = ({
+import { useTranslations } from "next-intl";
+
+const validate = ({
   fullname,
   phone,
   email,
@@ -15,26 +17,31 @@ export const validate = ({
     email?: string;
     message?: string;
   } = {};
+
   if (!fullname || fullname.trim() === " ") {
-    errors.fullname = "Imię i nazwisko wymagane";
+    errors.fullname = "validate-messages.fullname";
   }
 
   if (!email || email.trim() === " ") {
-    errors.email = "Email wymagany";
+    errors.email = "validate-messages.email";
   } else if (
     !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i.test(
       email
     )
   ) {
-    errors.email = "Nieprawidłowy adres email";
+    errors.email = "validate-messages.invalid-email";
   }
 
   if (!phone || phone.trim() === " ") {
-    errors.phone = "Numer telefonu wymagany";
+    errors.phone = "validate-messages.phone";
+  } else if (!/^\+\d{2,4}(?:\s\d{1,4}){3,}$/.test(phone)) {
+    errors.phone = "validate-messages.invalid-phone";
   }
 
   if (!message || message.trim() === " ") {
-    errors.message = "Wiadomość wymagana";
+    errors.message = "validate-messages.message";
   }
   return errors;
 };
+
+export default validate;
