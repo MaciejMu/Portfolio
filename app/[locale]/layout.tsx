@@ -10,6 +10,9 @@ import { NextIntlClientProvider } from "next-intl";
 export const metadata = {
   title: "Moje portfolio",
   description: "Moje portfolio - Maciej Muter",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 const poppins = Poppins({
