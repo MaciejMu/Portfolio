@@ -6,6 +6,7 @@ import { validate } from "../../utilis/validate";
 import axios from "axios";
 import Input from "../Input/Input";
 import TextArea from "../TextArea/TextArea";
+import { useTranslations } from "next-intl";
 
 interface IValues {
   fullname: string;
@@ -16,6 +17,8 @@ interface IValues {
 interface IErrors extends Partial<IValues> {}
 
 const ContactForm = () => {
+  const t = useTranslations("Contact");
+
   const [values, setValues] = useState({
     fullname: "",
     phone: "",
@@ -78,7 +81,7 @@ const ContactForm = () => {
           onChange={handleChange}
           id="fullname"
           name="fullname"
-          label="Imię i Nazwisko"
+          label={t("fullname")}
           placeholder="Robert Kubica"
           error={!!errors.fullname}
           errorMessage={!!errors.fullname ? errors.fullname : ""}
@@ -87,8 +90,9 @@ const ContactForm = () => {
           value={values.phone}
           onChange={handleChange}
           id="phone"
+          type="tel"
           name="phone"
-          label="Numer Telefonu"
+          label={t("phone")}
           placeholder="000 000 000"
           error={!!errors.phone}
           errorMessage={!!errors.phone ? errors.phone : ""}
@@ -99,8 +103,8 @@ const ContactForm = () => {
         onChange={handleChange}
         id="email"
         name="email"
-        label="Adres Email"
-        placeholder="twójadres@mail.com"
+        label={t("mail")}
+        placeholder={t("mail-placeholder")}
         error={!!errors.email}
         errorMessage={!!errors.email ? errors.email : ""}
       />
@@ -109,14 +113,14 @@ const ContactForm = () => {
         onChange={handleChange}
         id="message"
         name="message"
-        label="Wiadomość"
-        placeholder="Napisz do mnie..."
+        label={t("message")}
+        placeholder={t("message-placeholder")}
         error={!!errors.message}
         errorMessage={!!errors.message ? errors.message : ""}
       />
       <Button
         type="submit"
-        title={loading ? "Wysyłanie..." : "Wyślij"}
+        title={loading ? t("button-title.sending") : t("button-title.send")}
         disabled={loading}
       />
       <p>{success ? <span>{messageState}</span> : null}</p>

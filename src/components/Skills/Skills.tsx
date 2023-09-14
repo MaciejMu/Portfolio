@@ -2,11 +2,17 @@ import React from "react";
 import style from "./Skills.module.scss";
 import CheckedList from "../CheckedList/CheckedList";
 import SectionHeader from "../SectionHeader/SectionHeader";
+import { useTranslations } from "next-intl";
 
 const Skills = () => {
+  const t = useTranslations("Skills");
+
   return (
     <section className={style.section} id="Skills" data-aos="fade-up">
-      <SectionHeader title={"Umiejętności"} paragraph={"sprawdź moje"} />
+      <SectionHeader
+        title={t("section-header.title")}
+        paragraph={t("section-header.paragraph")}
+      />
 
       <div className={style.list}>
         <CheckedList

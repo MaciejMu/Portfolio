@@ -5,7 +5,49 @@
     "portfolio": "Portfolio",
     "contact": "Contact"
   },
+  "Profile": {
+    "greetings": "Hello! My name is",
+    "workfor": "I work for",
+    "contact": "Contact"
+  },
+  "Skills": {
+    "section-header": {
+      "paragraph": "check out my",
+      "title": "Skills"
+    },
+    "months": "mo"
+  },
+  "AboutMe": {
+    "section-header": { "paragraph": "read", "title": "About me" },
+    "description": "My greatest asset is my determination and desire for continuous growth. The challenges that come with working on the frontend motivate me to learn and enhance my skills. Furthermore, I am open to feedback and enjoy working in a team because I believe that only through collaboration can we achieve the best results. If you are looking for someone who will passionately contribute to the success of your project, you have found him!"
+  },
+  "Projects": {
+    "section-header": { "paragraph": "look through mine", "title": "Projects" }
+  },
   "Slider": {
-    "title": "Hello world!"
+    "alts": {
+      "1": "My Recipe recipes website",
+      "2": "Waiter Helper application for waiters",
+      "3": "wordly clone",
+      "4": "constans broker",
+      "5": "my portfolio website",
+      "6": "Beers page",
+      "7": "to-do list application",
+      "8": "simple vanilla js calculator",
+      "9": "workout map"
+    }
+  },
+  "Contact": {
+    "section-header": {
+      "paragraph": "get in touch with me",
+      "title": "Contact"
+    },
+    "fullname": "Full Name",
+    "phone": "Phone Number",
+    "mail": "Email Address",
+    "mail-placeholder": "youremail@mail.com",
+    "message": "Message",
+    "message-placeholder": "Write to me...",
+    "button-title": { "sending": "Sending...", "send": "Send" }
   }
 }

@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import React, { FC, useEffect, useState } from "react";
 
 type MonthCounterProps = {
@@ -5,6 +6,8 @@ type MonthCounterProps = {
 };
 
 const MonthCounter: FC<MonthCounterProps> = ({ startDate }) => {
+  const t = useTranslations("Skills");
+
   const [monthsPassed, setMonthsPassed] = useState(0);
 
   useEffect(() => {
@@ -15,7 +18,11 @@ const MonthCounter: FC<MonthCounterProps> = ({ startDate }) => {
     setMonthsPassed(months + monthDiff);
   }, [startDate]);
 
-  return <p>{monthsPassed} msc</p>;
+  return (
+    <p>
+      {monthsPassed} {t("months")}
+    </p>
+  );
 };
 
 export default MonthCounter;

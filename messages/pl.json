@@ -5,7 +5,67 @@
     "portfolio": "Portfolio",
     "contact": "Kontakt"
   },
+  "Profile": {
+    "greetings": "Cześć! nazywam się",
+    "workfor": "Pracuję dla",
+    "contact": "Kontakt"
+  },
+  "Skills": {
+    "section-header": { "paragraph": "sprawdź moje", "title": "Umiejętności" },
+    "months": "msc"
+  },
+  "AboutMe": {
+    "section-header": { "paragraph": "poczytaj", "title": "O mnie" },
+    "description": "Moim największym atutem jest moja determinacja i chęć ciągłego rozwoju. Wyzwania, które stawia przed mną praca na frontendzie motywują mnie do nauki i rozwijania swoich umiejętności. Ponadto, jestem otwarty na feedback i chętnie pracuję w zespole, ponieważ wierzę, że tylko dzięki współpracy możemy osiągnąć najlepsze wyniki. Jeśli szukasz osoby, która z pasją podejdzie do realizacji Twojego projektu, to właśnie ją znalazłeś!"
+  },
+  "Projects": {
+    "section-header": { "paragraph": "przejrzyj moje", "title": "Projekty" }
+  },
   "Slider": {
-    "title": "SIMANO"
+    "alts": {
+      "1": "My Recipe strona z przepisami",
+      "2": "Waiter Helper aplikacja dla kelnerów",
+      "3": "gra słówko",
+      "4": "constans broker",
+      "5": "moja strona portfolio",
+      "6": "Beers page",
+      "7": "aplikacja todo",
+      "8": "prosty kalkulator w vanilla js",
+      "9": "workout map"
+    }
+  },
+  "Contact": {
+    "section-header": { "paragraph": "złap ze mną", "title": "Kontakt" },
+    "fullname": "Imię i Nazwisko",
+    "phone": "Numer Telefonu",
+    "mail": "Adres Email",
+    "mail-placeholder": "twójadres@mail.com",
+    "message": "Wiadomość",
+    "message-placeholder": "Napisz do mnie...",
+    "button-title": { "sending": "Wysyłanie...", "send": "Wyślij" },
+    "validate-messages": {
+      "fullname": "Imię i nazwisko wymagane",
+      "email": "Email wymagany",
+      "wrong-email": "Nieprawidłowy adres email",
+      "phone": "Numer telefonu wymagany",
+      "message": "Wiadomość wymagana"
+    }
+  },
+  "Footer": {
+    "about-me": {
+      "href": "#AboutMe",
+      "aria-label": "Informacje o mnie",
+      "title": "O mnie"
+    },
+    "skills": {
+      "href": "#Skills",
+      "aria-label": "Technogogie które znam",
+      "title": "Doświadczenie"
+    },
+    "projects": {
+      "href": "#Projects",
+      "aria-label": "Moje projekty",
+      "title": "Portfolio"
+    }
   }
 }

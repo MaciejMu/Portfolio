@@ -1,23 +1,20 @@
 import SectionHeader from "../SectionHeader/SectionHeader";
 import Image from "next/image";
 import style from "./AboutMe.module.scss";
+import { useTranslations } from "next-intl";
 
 const AboutMe = () => {
+  const t = useTranslations("AboutMe");
+
   return (
     <section className={style.container} id="AboutMe" data-aos="fade-left">
-      <SectionHeader title={"O mnie"} paragraph={"poczytaj"} />
+      <SectionHeader
+        title={t("section-header.title")}
+        paragraph={t("section-header.paragraph")}
+      />
 
       <div className={style.content}>
-        <p>
-          Moim największym atutem jest moja determinacja i chęć ciągłego
-          rozwoju. Wyzwania, które stawia przed mną praca na frontendzie,
-          motywują mnie do nauki i rozwijania swoich umiejętności. Ponadto,
-          jestem otwarty na feedback i chętnie pracuję w zespole, ponieważ
-          wierzę, że tylko dzięki współpracy możemy osiągnąć najlepsze wyniki.
-          <br />
-          Jeśli szukasz osoby, która z pasją podejdzie do realizacji Twojego
-          projektu, to właśnie mnie szukasz!
-        </p>
+        <p>{t("description")}</p>
         <Image
           src={"/memojis/about-me.png"}
           width={400}

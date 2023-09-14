@@ -67,7 +67,7 @@ const Slider: FC<SliderProps> = ({ slideData }) => {
                 height={500}
                 width={500}
                 src={slide.image}
-                alt={slide.title}
+                alt={slide.alt}
                 className={style.image}
                 priority={true}
               />
