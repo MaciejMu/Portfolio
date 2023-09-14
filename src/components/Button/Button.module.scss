@@ -1,17 +1,20 @@
 .button {
   background: var(--gray-dark);
-  border: var(--gray-dark);
+  border: 1px solid var(--gray-dark);
   padding: 15px 30px;
   font-weight: 600;
   font-size: 14px;
   border-radius: 50px;
-  color: white;
   cursor: pointer;
   transition: 0.4s;
+  color: white;
 }
 
 .button:hover {
-  background: var(--second);
+  background: none;
+  border: 1px solid var(--second);
+  box-shadow: var(--shadow-box);
+  color: var(--text);
 }
 
 .button:active {

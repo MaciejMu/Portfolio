@@ -29,7 +29,9 @@
   --theme-icon: rgb(252, 231, 0);
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;

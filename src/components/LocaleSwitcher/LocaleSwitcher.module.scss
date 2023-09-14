@@ -2,4 +2,16 @@
   p {
     display: none;
   }
+  select {
+    appearance: none;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid var(--text);
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    line-height: inherit;
+    color: var(--text);
+    width: auto;
+  }
 }
