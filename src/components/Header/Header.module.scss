@@ -12,8 +12,13 @@
     padding: 0 150px;
   }
 
-  .list {
+  div {
     display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .list {
     gap: 30px;
     list-style: none;
 
@@ -24,7 +29,7 @@
       color: var(--text);
       padding: 5px;
 
-      &:after {    
+      &:after {
         background: none repeat scroll 0 0 transparent;
         bottom: 0;
         content: "";
@@ -32,14 +37,14 @@
         height: 2px;
         left: 50%;
         position: absolute;
-        background:var(--text);
+        background: var(--text);
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
         width: 0;
       }
 
-      &:hover:after { 
-        width: 100%; 
-        left: 0; 
+      &:hover:after {
+        width: 100%;
+        left: 0;
       }
 
       @media (max-width: 800px) {

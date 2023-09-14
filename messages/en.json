@@ -1,4 +1,8 @@
 {
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, pl {PL} en {ENG} other {Unknown}}"
+  },
   "Header": {
     "about-me": "About me",
     "skills": "Skills",

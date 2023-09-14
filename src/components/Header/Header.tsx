@@ -1,3 +1,4 @@
+import LocaleSwitcher from "../LocaleSwitcher/LocaleSwitcher";
 import ScrollLink from "../ScrollLink/ScrollLink";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 import style from "./Header.module.scss";
@@ -5,6 +6,7 @@ import { useTranslations } from "next-intl";
 
 export const Header = () => {
   const t = useTranslations("Header");
+
   return (
     <header className={style.header} data-aos="fade-down" data-aos-delay="400">
       <div className={style.list}>
@@ -24,7 +26,10 @@ export const Header = () => {
           <p>{t("contact")}</p>
         </ScrollLink>
       </div>
-      <ThemeSwitch />
+      <div>
+        <LocaleSwitcher />
+        <ThemeSwitch />
+      </div>
     </header>
   );
 };
