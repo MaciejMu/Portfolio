@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import style from "./Footer.module.scss";
 import { useTranslations } from "next-intl";

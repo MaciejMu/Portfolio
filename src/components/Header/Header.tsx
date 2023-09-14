@@ -1,3 +1,4 @@
+"use client";
 import LocaleSwitcher from "../LocaleSwitcher/LocaleSwitcher";
 import ScrollLink from "../ScrollLink/ScrollLink";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
