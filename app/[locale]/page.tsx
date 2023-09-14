@@ -9,8 +9,11 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Slider from "@/components/Slider/Slider";
+import { useTranslations } from "next-intl";
 
-export default function Home({ params: { lng } }: { params: { lng: string } }) {
+export default function Home() {
+  const t = useTranslations("Slider");
+
   useEffect(() => {
     AOS.init({
       easing: "ease-out-cubic",

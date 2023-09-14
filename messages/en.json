@@ -1,0 +1,11 @@
+{
+  "Header": {
+    "about-me": "About me",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "Slider": {
+    "title": "Hello world!"
+  }
+}
