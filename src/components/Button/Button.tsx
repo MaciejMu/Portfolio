@@ -17,6 +17,7 @@ const Button: FC<ButtonProps> = ({ title, outlined, type, disabled }) => {
       className={clsx(style.button, {
         [style.outlined]: outlined,
       })}
+      aria-label={title}
     >
       {title}
     </button>

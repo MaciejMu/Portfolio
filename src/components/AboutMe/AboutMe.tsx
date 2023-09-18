@@ -16,7 +16,7 @@ const AboutMe = () => {
       <div className={style.content}>
         <p>{t("description")}</p>
         <Image
-          src={"/memojis/about-me.png"}
+          src={"/memojis/about-me.webp"}
           width={400}
           height={400}
           alt={"memoji"}

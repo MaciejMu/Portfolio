@@ -12,8 +12,9 @@ export const Profile = () => {
   return (
     <section className={style.section} data-aos="fade-right">
       <Image
+        priority={true}
         className={style.memoji}
-        src={"/memojis/profile.png"}
+        src={"/memojis/profile.webp"}
         alt={"memoji"}
         width={398}
         height={398}

@@ -15,19 +15,16 @@ export const Header = () => {
   const getNavList = () => {
     return (
       <>
-        <ScrollLink href={"#AboutMe"} aria-label="Informacje o mnie">
+        <ScrollLink href={"#AboutMe"} aria-label={t("about-me")}>
           <p>{t("about-me")}</p>
         </ScrollLink>
-        <ScrollLink href={"#Skills"} aria-label="Technogogie które znam">
+        <ScrollLink href={"#Skills"} aria-label={t("skills")}>
           <p>{t("skills")}</p>
         </ScrollLink>
-        <ScrollLink href={"#Projects"} aria-label="Moje projekty">
+        <ScrollLink href={"#Projects"} aria-label={t("portfolio")}>
           <p>{t("portfolio")}</p>
         </ScrollLink>
-        <ScrollLink
-          href={"#Contact"}
-          aria-label="Adress mailowy i numer telefonu"
-        >
+        <ScrollLink href={"#Contact"} aria-label={t("contact")}>
           <p>{t("contact")}</p>
         </ScrollLink>
       </>
@@ -42,9 +39,9 @@ export const Header = () => {
           onClick={() => setIsOpened((prev) => !prev)}
         >
           {isOpened ? (
-            <FontAwesomeIcon icon={faX} />
+            <FontAwesomeIcon icon={faX} aria-label="close button" />
           ) : (
-            <FontAwesomeIcon icon={faBars} />
+            <FontAwesomeIcon icon={faBars} aria-label="open menu button" />
           )}
         </button>
         <nav className={style.navigation}>{getNavList()}</nav>

@@ -17,7 +17,7 @@ const Contact = () => {
       />
       <div className={style.container}>
         <Image
-          src={"/images/contact.png"}
+          src={"/memojis/contact.webp"}
           width={398}
           height={398}
           alt={"memoji"}

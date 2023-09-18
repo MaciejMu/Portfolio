@@ -20,8 +20,8 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <label className={style.label}>
-      <p>{t("label")}</p>
+    <section className={style.section}>
+      <label hidden>{t("label")}</label>
       <select
         defaultValue={locale}
         disabled={isPending}
@@ -33,6 +33,6 @@ export default function LocaleSwitcher() {
           </option>
         ))}
       </select>
-    </label>
+    </section>
   );
 }
