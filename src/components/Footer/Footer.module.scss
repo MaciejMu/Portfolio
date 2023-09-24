@@ -20,17 +20,19 @@
       color: var(--text);
       transition: all 0.3s ease-in-out;
 
-
       &:hover {
         font-size: 28px;
         transition: all 0.3s ease-in-out;
       }
     }
-
-    @media (max-width: 568px) {
+    @media (max-width: 800px) {
       margin-top: 50px;
       flex-direction: column;
     }
+  }
+
+  @media (max-width: 800px) {
+    height: fit-content;
   }
 
   a {
