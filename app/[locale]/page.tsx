@@ -65,12 +65,6 @@ export default function Home() {
             demoLink: "https://best-resources.vercel.app/",
           },
           {
-            image: "/images/projects/brokers.webp",
-            alt: t("alts.5"),
-            title: "Constans Broker",
-            demoLink: "https://constans-broker.vercel.app/",
-          },
-          {
             image: "/images/projects/portfolio.webp",
             alt: t("alts.6"),
             title: "Portfolio",
